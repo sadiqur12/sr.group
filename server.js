@@ -42,7 +42,7 @@ app.use('/api/chat', chatRoutes);
 app.use('/api/admin', adminRoutes);
 
 // ফ্রন্টএন্ড সার্ভ করছে
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(__dirname));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
